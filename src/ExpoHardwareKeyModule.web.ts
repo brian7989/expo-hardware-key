@@ -1,15 +1,15 @@
-import { registerWebModule, NativeModule } from 'expo';
+// Web stub — all key operations throw NOT_SUPPORTED.
+import { HardwareKeyError, HardwareKeyErrorCode } from './types';
 
-import { ExpoHardwareKeyModuleEvents } from './ExpoHardwareKey.types';
-
-class ExpoHardwareKeyModule extends NativeModule<ExpoHardwareKeyModuleEvents> {
-  PI = Math.PI;
-  async setValueAsync(value: string): Promise<void> {
-    this.emit('onChange', { value });
-  }
-  hello() {
-    return 'Hello world! 👋';
-  }
+function notSupported(): never {
+  throw new HardwareKeyError('Not supported on web', HardwareKeyErrorCode.NOT_SUPPORTED);
 }
 
-export default registerWebModule(ExpoHardwareKeyModule, 'ExpoHardwareKeyModule');
+export default {
+  generateKey: notSupported,
+  sign: notSupported,
+  getPublicKey: notSupported,
+  keyExists: async (_keyId: string) => false,
+  deleteKey: async (_keyId: string) => { /* no-op */ },
+  isHardwareBackedAvailable: async () => false,
+};
