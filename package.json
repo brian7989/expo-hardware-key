@@ -48,14 +48,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/briantslee/expo-hardware-key"
+    "url": "https://github.com/brian7989/expo-hardware-key"
   },
   "bugs": {
-    "url": "https://github.com/briantslee/expo-hardware-key/issues"
+    "url": "https://github.com/brian7989/expo-hardware-key/issues"
   },
   "author": "Brian Taesung Lee <brian.ts.lee.0907@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/briantslee/expo-hardware-key#readme",
+  "homepage": "https://github.com/brian7989/expo-hardware-key#readme",
   "devDependencies": {
     "@noble/curves": "^2.0.1",
     "@noble/hashes": "^2.0.1",

@@ -24,6 +24,6 @@ Private keys never leave the hardware boundary. JS code is untrusted with respec
 
 ## Reporting a Vulnerability
 
-Do not open a public issue. Report via [GitHub Security Advisory](https://github.com/briantslee/expo-hardware-key/security/advisories/new) or email **brian.ts.lee.0907@gmail.com** with subject `[expo-hardware-key] Security Issue`.
+Do not open a public issue. Report via [GitHub Security Advisory](https://github.com/brian7989/expo-hardware-key/security/advisories/new) or email **brian.ts.lee.0907@gmail.com** with subject `[expo-hardware-key] Security Issue`.
 
 Response times: acknowledgement within 48 hours, status update within 7 days.
