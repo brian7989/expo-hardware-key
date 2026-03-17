@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "expo-hardware-key-example",
+    "slug": "expo-hardware-key-example",
+    "version": "1.0.0",
+    "ios": {
+      "bundleIdentifier": "expo.modules.hardwarekey.example"
+    },
+    "android": {
+      "package": "expo.modules.hardwarekey.example"
+    }
+  }
+}
