@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "expo-hardware-key": ["../src/index"],
+      "expo-hardware-key/*": ["../src/*"]
+    }
+  }
+}
