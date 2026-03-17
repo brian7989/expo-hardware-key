@@ -1,14 +1,28 @@
 {
   "name": "expo-hardware-key",
   "version": "0.1.0",
-  "description": "My new module",
+  "description": "Hardware-backed P-256 key generation and ECDSA signing for React Native — iOS Secure Enclave, Android Keystore/StrongBox. Private keys never leave the hardware boundary.",
   "main": "build/index.js",
+  "module": "build/index.js",
   "types": "build/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/index.js",
+      "require": "./build/index.js",
+      "types": "./build/index.d.ts"
+    },
+    "./mock": {
+      "import": "./build/mock.js",
+      "require": "./build/mock.js",
+      "types": "./build/mock.d.ts"
+    }
+  },
   "scripts": {
     "build": "expo-module build",
     "clean": "expo-module clean",
     "lint": "expo-module lint",
-    "test": "expo-module test",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --config jest.config.js",
+    "test:coverage": "NODE_OPTIONS=--experimental-vm-modules npx jest --config jest.config.js --coverage",
     "prepare": "expo-module prepare",
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module",
@@ -18,26 +32,60 @@
   "keywords": [
     "react-native",
     "expo",
-    "expo-hardware-key",
-    "ExpoHardwareKey"
+    "hardware",
+    "secure-enclave",
+    "android-keystore",
+    "strongbox",
+    "p256",
+    "ecdsa",
+    "biometrics",
+    "cryptography",
+    "key-management",
+    "hardware-backed",
+    "trusted-execution-environment",
+    "tee",
+    "expo-hardware-key"
   ],
-  "repository": "",
-  "bugs": {
-    "url": "/issues"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/briantslee/expo-hardware-key"
   },
-  "author": "Brian Taesung Lee <brian.ts.lee.0907@gmail.com> ()",
+  "bugs": {
+    "url": "https://github.com/briantslee/expo-hardware-key/issues"
+  },
+  "author": "Brian Taesung Lee <brian.ts.lee.0907@gmail.com>",
   "license": "MIT",
-  "homepage": "#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/briantslee/expo-hardware-key#readme",
   "devDependencies": {
+    "@noble/curves": "^2.0.1",
+    "@noble/hashes": "^2.0.1",
     "@types/react": "~19.1.1",
-    "expo-module-scripts": "^55.0.2",
     "expo": "^55.0.5",
+    "expo-module-scripts": "^55.0.2",
     "react-native": "0.82.1"
   },
   "peerDependencies": {
+    "@noble/curves": "^2.0.1",
+    "@noble/hashes": "^2.0.1",
     "expo": "*",
     "react": "*",
     "react-native": "*"
-  }
+  },
+  "peerDependenciesMeta": {
+    "@noble/curves": {
+      "optional": true
+    },
+    "@noble/hashes": {
+      "optional": true
+    }
+  },
+  "files": [
+    "build",
+    "ios",
+    "android",
+    "src",
+    "expo-module.config.json",
+    "!**/__tests__",
+    "!**/.*"
+  ]
 }
